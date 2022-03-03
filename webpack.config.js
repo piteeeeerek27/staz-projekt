@@ -34,12 +34,12 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "./src/plugins/index.html",
+			template: "./src/index.html",
 			filename: "index.html",
 		}),
 	],
 	devServer: {
-		static: path.resolve(__dirname, "src/plugins/index.html"),
+		static: path.resolve(__dirname, "src/index.html"),
 		port: 8080,
 		open: true,
 		hot: true,

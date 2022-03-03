@@ -1,0 +1,14 @@
+[*] sass loader
+[*] git repo
+[*] prettier
+[*] webpack dev serv
+[] użycie klasy
+[] dodać interfacy(ts) do projektu
+[] HTML ładowany z zewnętrznych plików (wszystko do głownego index.ts)
+
+portfolio:
+- prawy dolny róg social media mail itp
+- srodek bardziej od lewej krótko napisać co robie jak na imie itp
+- od lewej srode/dół skille
+- pod skillami języki
+- projekty swoje

@@ -1,4 +1,6 @@
-@mixin header {
+@import "./variables";
+
+@mixin nav {
 	background-color: burlywood;
 	color: $whiteText;
 	height: 15%;
