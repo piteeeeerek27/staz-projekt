@@ -1,7 +1,16 @@
-@import "./left.scss";
-@import "./right.scss";
+@import "./variables.scss";
 
 @mixin context {
 	display: flex;
 	height: 100%;
+	.left {
+		background-color: rgb(82, 53, 15);
+		color: $whiteText;
+		width: 50%;
+	}
+	.right {
+		background-color: rgb(15, 52, 82);
+		color: $whiteText;
+		width: 50%;
+	}
 }
