@@ -2,12 +2,8 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import "../styles/main.scss";
 
+const div = document.getElementById("mainDiv");
 class Project {
-	constructor() {
-		// Header();
-	}
+	constructor(mainDiv: HTMLElement) {}
 }
-new Project();
-
-console.log("header", Header());
-console.log("Footer", Footer());
+new Project(div);
