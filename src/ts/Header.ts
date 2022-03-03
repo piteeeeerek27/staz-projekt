@@ -1,2 +1,6 @@
-export const Header = () => {};
-console.log(Header());
+export const Header = () => {
+	const toString = require("../html/static-header.html");
+	const div = document.createElement("div");
+	div.innerHTML = toString.default;
+	return div;
+};

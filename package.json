@@ -2,7 +2,7 @@
 	"name": "project",
 	"version": "1.0.0",
 	"description": "",
-	"main": "./src/js/index.ts",
+	"main": "./src/ts/index.ts",
 	"scripts": {
 		"start:dev": "webpack-dev-server",
 		"test": "echo \"Error: no test specified\" && exit 1"

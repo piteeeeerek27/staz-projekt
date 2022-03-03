@@ -30,7 +30,7 @@ module.exports = {
 	},
 	output: {
 		filename: "main.js",
-		path: path.resolve(__dirname, "dist"),
+		path: path.resolve(__dirname, "src"),
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -39,7 +39,7 @@ module.exports = {
 		}),
 	],
 	devServer: {
-		static: path.resolve(__dirname, "src/index.html"),
+		static: path.resolve(__dirname, "./src/index.html"),
 		port: 8080,
 		open: true,
 		hot: true,

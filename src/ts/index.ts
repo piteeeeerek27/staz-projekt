@@ -1,6 +1,11 @@
+import { Header } from "./Header";
 import "../styles/main.scss";
 
 class Project {
-	constructor() {}
+	constructor() {
+		Header();
+	}
 }
-const portfolio = new Project();
+new Project();
+
+console.log("header", Header());

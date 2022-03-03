@@ -2,9 +2,9 @@
 [*] git repo
 [*] prettier
 [*] webpack dev serv
+[] HTML ładowany z zewnętrznych plików (wszystko do głownego index.ts)
 [] użycie klasy
 [] dodać interfacy(ts) do projektu
-[] HTML ładowany z zewnętrznych plików (wszystko do głownego index.ts)
 
 portfolio:
 - prawy dolny róg social media mail itp

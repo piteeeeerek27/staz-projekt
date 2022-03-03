@@ -2,6 +2,7 @@
 @import "./footer.scss";
 @import "./mainDiv.scss";
 @import "./context.scss";
+@import "./variables.scss";
 
 * {
 	padding: 0%;
@@ -9,25 +10,21 @@
 	background-color: $body;
 }
 
-h2 {
-	color: $whiteText;
-}
-
-#main {
-	@include mainDiv;
-	.top {
-		@include nav;
-	}
-	.context {
-		@include context;
-		.left {
-			@include left;
-		}
-		.right {
-			@include right;
-		}
-	}
-	.footer {
-		@include footer;
-	}
-}
+// #main {
+// 	@include mainDiv;
+// 	.top {
+// 		@include nav;
+// 	}
+// 	.context {
+// 		@include context;
+// 		.left {
+// 			@include left;
+// 		}
+// 		.right {
+// 			@include right;
+// 		}
+// 	}
+// 	.footer {
+// 		@include footer;
+// 	}
+// }
