@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	entry: "./src/js/index.ts",
+	entry: "./src/ts/index.ts",
 	mode: "production",
 	module: {
 		rules: [
@@ -16,7 +16,7 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.html$/i,
+				test: /\.html$/,
 				loader: "html-loader",
 			},
 			{
@@ -34,12 +34,12 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "./src/html/index.html",
-			filename: "./index.html",
+			template: "./src/plugins/index.html",
+			filename: "index.html",
 		}),
 	],
 	devServer: {
-		static: path.resolve(__dirname, "src"),
+		static: path.resolve(__dirname, "src/plugins/index.html"),
 		port: 8080,
 		open: true,
 		hot: true,

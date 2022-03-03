@@ -1,0 +1,7 @@
+@import "./left.scss";
+@import "./right.scss";
+
+@mixin context {
+	display: flex;
+	height: 100%;
+}
