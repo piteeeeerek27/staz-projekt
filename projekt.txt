@@ -12,3 +12,4 @@ portfolio:
 - od lewej srode/dół skille
 - pod skillami języki
 - projekty swoje
+- footer "find me on => linkedin,twitter,facebook"
