@@ -5,7 +5,6 @@ import { Aside } from "./Aside";
 import "../styles/main.scss";
 
 const mainContent = document.querySelector(".leftSection");
-const sidebar = document.querySelector(".sidebar");
 const mainDiv = document.getElementById("mainDiv");
 
 class Project {

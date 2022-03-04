@@ -13,3 +13,7 @@ portfolio:
 - pod skillami języki
 - projekty swoje
 - footer "find me on => linkedin,twitter,facebook"
+- rozwijane underliny do nav z transition
+- lodash
+- uuid
+- po kliknieciu w button contact pokaze sie prawa strona i na górze X który zamyka

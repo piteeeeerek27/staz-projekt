@@ -32,9 +32,9 @@ body {
 		flex-direction: column;
 		.sectionDiv {
 			flex-grow: 1;
+			@include context;
 		}
 		@include nav;
-		@include context;
 		@include footer;
 	}
 	@include aside;

@@ -1,6 +1,7 @@
 @mixin context {
 	.section {
 		background-color: chocolate;
+		position: relative;
 		padding: 1rem 0;
 		flex: 0.8;
 		h1 {
@@ -10,6 +11,10 @@
 		}
 		p {
 			font-size: 1.3rem;
+		}
+		.section-btn {
+			position: absolute;
+			right: 0;
 		}
 	}
 }
