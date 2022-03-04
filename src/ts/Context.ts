@@ -1,6 +1,6 @@
 export const Context = () => {
-	const toString = require("../html/_footer.html");
-	const context = document.createElement("div");
-	context.innerHTML = toString.default;
-	return context;
+	const toString = require("../html/_context.html");
+	const div = document.createElement("div");
+	div.innerHTML = toString.default;
+	return div;
 };

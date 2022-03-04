@@ -1,16 +1,15 @@
-@import "./variables.scss";
-
 @mixin context {
-	display: flex;
-	height: 100%;
-	.left {
-		background-color: rgb(82, 53, 15);
-		color: $whiteText;
-		width: 50%;
-	}
-	.right {
-		background-color: rgb(15, 52, 82);
-		color: $whiteText;
-		width: 50%;
+	.section {
+		background-color: chocolate;
+		min-height: 80vh;
+		padding: 1rem;
+		h1 {
+			font-weight: bold;
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+		}
+		p {
+			font-size: 1.3rem;
+		}
 	}
 }
