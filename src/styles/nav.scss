@@ -1,22 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
-@import "./variables";
 
 @mixin nav {
-	ul {
-		justify-content: space-around;
-		list-style-type: none;
-		padding: 2rem;
-		display: flex;
-		li {
-			font-family: "Sansita Swashed", cursive;
-			transition: transform 500ms ease-in-out;
-			transform: scale(1);
-			font-size: xx-large;
-			&:hover {
+	.nav {
+		ul {
+			justify-content: space-around;
+			list-style-type: none;
+			padding: 2rem;
+			display: flex;
+			li {
+				font-family: "Sansita Swashed", cursive;
 				transition: transform 500ms ease-in-out;
-				color: rgb(177, 177, 177);
-				transform: scale(1.2);
-				cursor: pointer;
+				transform: scale(1);
+				font-size: xx-large;
+				&:hover {
+					transition: transform 500ms ease-in-out;
+					color: rgb(177, 177, 177);
+					transform: scale(1.2);
+					cursor: pointer;
+				}
 			}
 		}
 	}

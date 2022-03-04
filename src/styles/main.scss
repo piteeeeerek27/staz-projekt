@@ -15,10 +15,6 @@
 }
 
 #mainDiv {
-	.nav {
-		@include nav;
-	}
-	.footer {
-		@include footer;
-	}
+	@include nav;
+	@include footer;
 }

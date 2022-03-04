@@ -7,6 +7,7 @@ const indexDiv = document.getElementById("mainDiv");
 class Project {
 	constructor() {
 		this.Nav();
+		this.Foooter();
 	}
 	Nav() {
 		indexDiv.appendChild(Nav());

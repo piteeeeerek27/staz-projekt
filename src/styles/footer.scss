@@ -1,4 +1,20 @@
-@import "./variables";
-
 @mixin footer {
+	.footer {
+		display: flex;
+		justify-content: space-around;
+		margin: 0 5px;
+		.footer-1st-section {
+			background-color: rgb(112, 97, 74);
+			width: 50%;
+		}
+		.footer-2nd-section {
+			width: 50%;
+			display: flex;
+			justify-content: space-around;
+			li {
+				background-color: rgb(77, 72, 66);
+				list-style-type: none;
+			}
+		}
+	}
 }
