@@ -1,25 +1,31 @@
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { Context } from "./Context";
+import { Aside } from "./Aside";
 import "../styles/main.scss";
 
-const indexDiv = document.getElementById("mainDiv");
+const mainContent = document.querySelector(".leftSection");
+const sidebar = document.querySelector(".sidebar");
+const mainDiv = document.getElementById("mainDiv");
 
 class Project {
 	constructor() {
 		this.Nav();
 		this.Context();
-		this.Foooter();
+		this.Footer();
+		this.Aside();
 	}
 	Nav() {
-		indexDiv.appendChild(Nav());
-	}
-	Foooter() {
-		indexDiv.appendChild(Footer());
+		mainContent.appendChild(Nav());
 	}
 	Context() {
-		indexDiv.appendChild(Context());
+		mainContent.appendChild(Context());
+	}
+	Aside() {
+		mainDiv.appendChild(Aside());
+	}
+	Footer() {
+		mainContent.appendChild(Footer());
 	}
 }
 new Project();
-console.log(Footer());

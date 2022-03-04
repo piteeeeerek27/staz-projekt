@@ -1,6 +1,7 @@
 export const Context = () => {
 	const toString = require("../html/_context.html");
-	const div = document.createElement("div");
-	div.innerHTML = toString.default;
-	return div;
+	const mainDiv = document.createElement("div");
+	mainDiv.classList.add("sectionDiv");
+	mainDiv.innerHTML = toString.default;
+	return mainDiv;
 };

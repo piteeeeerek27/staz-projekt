@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
 @import "./variables.scss";
 @import "./mainDiv.scss";
 @import "./context.scss";
+@import "./sidebar.scss";
 @import "./footer.scss";
 @import "./nav.scss";
 
@@ -14,9 +16,26 @@
 	margin: 0%;
 }
 
+body {
+	display: flex;
+	position: relative;
+}
+
 #mainDiv {
-	min-height: 100vh;
-	@include nav;
-	@include context;
-	@include footer;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	.leftSection {
+		width: 75%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		.sectionDiv {
+			flex-grow: 1;
+		}
+		@include nav;
+		@include context;
+		@include footer;
+	}
+	@include aside;
 }

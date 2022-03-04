@@ -1,0 +1,33 @@
+@mixin aside {
+	.asideDiv {
+		width: 25%;
+		height: 100%;
+		display: grid;
+		place-items: center;
+	}
+	.aside {
+		background-color: rgb(131, 131, 96);
+		.contacts {
+			width: 100%;
+			height: 100%;
+			ul {
+				li {
+					font-family: "Sansita Swashed", cursive;
+					transition: transform 500ms ease-in-out;
+					list-style-type: none;
+					transform: scale(1);
+					font-size: 2rem;
+					padding: 3rem 0;
+					&:hover {
+						transition: transform 500ms ease-in-out;
+						transform: scale(1.1);
+						cursor: pointer;
+					}
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

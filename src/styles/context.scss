@@ -1,8 +1,8 @@
 @mixin context {
 	.section {
 		background-color: chocolate;
-		min-height: 80vh;
-		padding: 1rem;
+		padding: 1rem 0;
+		flex: 0.8;
 		h1 {
 			font-weight: bold;
 			font-size: 2.5rem;

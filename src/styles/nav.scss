@@ -1,14 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
-
 @mixin nav {
 	.nav {
 		background-color: darkcyan;
-		min-height: 10vh;
-		padding: 1rem;
+		flex: 0.1;
+		padding: 1rem 0;
 		ul {
 			justify-content: space-around;
 			list-style-type: none;
 			display: flex;
+			align-items: center;
 			li {
 				font-family: "Sansita Swashed", cursive;
 				transition: transform 500ms ease-in-out;
@@ -17,10 +16,16 @@
 				font-size: xx-large;
 				&:hover {
 					transition: transform 500ms ease-in-out;
-					color: rgb(177, 177, 177);
 					text-decoration: underline;
 					transform: scale(1.2);
 					cursor: pointer;
+				}
+				a {
+					text-decoration: none;
+					background-color: transparent;
+					&:hover {
+						color: rgb(177, 177, 177);
+					}
 				}
 			}
 		}
