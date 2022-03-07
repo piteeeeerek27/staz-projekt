@@ -21,5 +21,6 @@ class Project {
 	Aside() {
 		mainDiv.appendChild(Aside());
 	}
+	ShowSidebar() {}
 }
 new Project();
