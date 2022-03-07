@@ -12,7 +12,6 @@ portfolio:
 - od lewej srode/dół skille
 - pod skillami języki
 - projekty swoje
-- footer "find me on => linkedin,twitter,facebook"
 - rozwijane underliny do nav z transition
 - lodash
 - uuid

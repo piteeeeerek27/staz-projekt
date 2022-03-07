@@ -3,25 +3,19 @@
 @import "./mainDiv.scss";
 @import "./context.scss";
 @import "./sidebar.scss";
-@import "./footer.scss";
 @import "./nav.scss";
 
 *,
 *::after,
 *::before {
-	background-color: $body;
 	box-sizing: border-box;
-	color: $whiteText;
 	padding: 0%;
 	margin: 0%;
-<<<<<<< HEAD
-=======
-	background-color: $body;
 	color: $whiteText;
->>>>>>> origin/master
 }
 
 body {
+	background-color: $body;
 	display: flex;
 	position: relative;
 }
@@ -31,8 +25,7 @@ body {
 	height: 100vh;
 	display: flex;
 	.leftSection {
-		width: 75%;
-		height: 100%;
+		width: auto;
 		display: flex;
 		flex-direction: column;
 		.sectionDiv {
@@ -40,7 +33,19 @@ body {
 			@include context;
 		}
 		@include nav;
-		@include footer;
 	}
 	@include aside;
+}
+
+.graySymbols {
+	color: rgb(80, 80, 80);
+}
+.darkGreenSpan {
+	color: $dark-green;
+	&:hover {
+		color: rgb(0, 196, 0);
+	}
+}
+.darkGreenSpan-2 {
+	padding: 0 0.3rem;
 }

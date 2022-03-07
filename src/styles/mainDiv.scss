@@ -1,7 +1,4 @@
-@import "./variables";
-
 @mixin mainDiv {
-	background-color: $body;
 	height: 100vh;
 	width: 100%;
 	display: flex;
