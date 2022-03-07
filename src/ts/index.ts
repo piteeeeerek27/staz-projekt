@@ -4,6 +4,7 @@ import { Context } from "./Context";
 import { Aside } from "./Aside";
 import "../styles/main.scss";
 
+<<<<<<< HEAD
 const mainContent = document.querySelector(".leftSection");
 const mainDiv = document.getElementById("mainDiv");
 
@@ -28,3 +29,10 @@ class Project {
 	}
 }
 new Project();
+=======
+const div = document.getElementById("mainDiv");
+class Project {
+	constructor(mainDiv: HTMLElement) {}
+}
+new Project(div);
+>>>>>>> origin/master
