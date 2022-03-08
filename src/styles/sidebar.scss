@@ -1,13 +1,9 @@
 @mixin aside {
-	.asideDiv {
-		width: auto;
-	}
-	.aside {
-		display: grid;
+	#aside {
+		display: none;
 		place-items: center;
 		height: 100%;
 		font-family: "Sansita Swashed", cursive;
-
 		.header {
 			display: flex;
 			flex-direction: column;
