@@ -11,13 +11,13 @@ module.exports = {
 				use: ["style-loader", "css-loader", "sass-loader"],
 			},
 			{
+				test: /\.html$/,
+				loader: "html-loader",
+			},
+			{
 				test: /\.tsx?$/,
 				use: "ts-loader",
 				exclude: /node_modules/,
-			},
-			{
-				test: /\.html$/,
-				loader: "html-loader",
 			},
 			{
 				test: /\.(png|jpe?g|gif)$/i,

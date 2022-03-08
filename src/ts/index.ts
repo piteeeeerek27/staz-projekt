@@ -6,20 +6,20 @@ import "../styles/main.scss";
 const mainContent = document.querySelector(".leftSection");
 const mainDiv = document.getElementById("mainDiv");
 
+enum displays {
+	grid = "none",
+	block = "none",
+	none = "none",
+}
+
 class Project {
 	constructor() {
-		this.Nav();
-		this.Context();
-		this.Aside();
+		this.run();
 		this.toggleSidebar();
 	}
-	Nav() {
+	run() {
 		mainContent.appendChild(Nav());
-	}
-	Context() {
 		mainContent.appendChild(Context());
-	}
-	Aside() {
 		mainDiv.appendChild(Aside());
 	}
 	toggleSidebar() {
@@ -32,9 +32,9 @@ class Project {
 			hideSidebar.style.display = "block";
 		});
 		hideSidebar.addEventListener("click", () => {
-			hideSidebar.style.display = "none";
-			showSidebar.style.display = "block";
 			sidebar.style.display = "none";
+			showSidebar.style.display = "block";
+			hideSidebar.style.display = "none";
 		});
 	}
 }
