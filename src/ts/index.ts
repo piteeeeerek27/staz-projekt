@@ -11,8 +11,7 @@ class Project {
 		this.Nav();
 		this.Context();
 		this.Aside();
-		this.openSidebar();
-		this.closeSidebar();
+		this.toggleSidebar();
 	}
 	Nav() {
 		mainContent.appendChild(Nav());
@@ -23,7 +22,7 @@ class Project {
 	Aside() {
 		mainDiv.appendChild(Aside());
 	}
-	openSidebar() {
+	toggleSidebar() {
 		const showSidebar = document.getElementById("showSidebar");
 		const hideSidebar = document.getElementById("hideSidebar");
 		const sidebar = document.getElementById("aside");
@@ -32,11 +31,6 @@ class Project {
 			showSidebar.style.display = "none";
 			hideSidebar.style.display = "block";
 		});
-	}
-	closeSidebar() {
-		const showSidebar = document.getElementById("showSidebar");
-		const hideSidebar = document.getElementById("hideSidebar");
-		const sidebar = document.getElementById("aside");
 		hideSidebar.addEventListener("click", () => {
 			hideSidebar.style.display = "none";
 			showSidebar.style.display = "block";
