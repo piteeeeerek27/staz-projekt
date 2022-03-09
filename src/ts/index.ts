@@ -6,11 +6,10 @@ import "../styles/main.scss";
 const mainContent = document.querySelector(".leftSection");
 const mainDiv = document.getElementById("mainDiv");
 
-enum displays {
-	grid = "none",
-	block = "none",
-	none = "none",
-}
+// const ddd = document.querySelector(".");
+
+console.log(Nav());
+console.log("index", Context().classList.contains("text"));
 
 class Project {
 	constructor() {
