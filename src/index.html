@@ -9,7 +9,180 @@
 	<body>
 		<main>
 			<div id="mainDiv">
-				<div class="leftSection"></div>
+				<div class="leftSection">
+					<div class="leftSectionNav">
+						<nav class="nav">
+							<ul>
+								<li>
+									<a class="tabs tabHome" href="#Home"
+										>// 01. <span class="graySymbols">&#60;</span
+										><span class="darkGreenSpan">Home</span>
+										<span class="graySymbols">&#47;&#62;</span>
+									</a>
+								</li>
+								<li>
+									<a class="tabs tabAboutMe" href="#AboutMe">
+										// 02. <span class="graySymbols">&#60;</span
+										><span class="darkGreenSpan">About Me</span>
+										<span class="graySymbols">&#47;&#62; </span>
+									</a>
+								</li>
+								<li>
+									<a class="tabs tabProjects" href="#Projects"
+										>// 03. <span class="graySymbols">&#60;</span
+										><span class="darkGreenSpan">Projects</span>
+										<span class="graySymbols">&#47;&#62; </span></a
+									>
+								</li>
+								<li>
+									<a class="tabs tabTechnologies" href="#Technologies"
+										>// 04. <span class="graySymbols">&#60;</span
+										><span class="darkGreenSpan">Technologies</span>
+										<span class="graySymbols">&#47;&#62; </span></a
+									>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="sectionDiv">
+						<section class="section">
+							<div class="text">
+								<div class="section-h1">
+									<span class="graySymbols">&#60;h1&#62;</span>
+									<h1>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Eaque, repellat?
+									</h1>
+									<span class="graySymbols">&#60;h1&#47;&#62;</span>
+								</div>
+
+								<div class="section-h3">
+									<span class="graySymbols">&#60;h3&#62;</span>
+									<h3>
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Aperiam maiores totam voluptates ducimus a iure molestias
+										illum at. Reiciendis ipsum labore voluptatibus praesentium
+										rerum nulla ab? Asperiores rem pariatur quam!
+									</h3>
+									<span class="graySymbols">&#60;h3&#47;&#62;</span>
+								</div>
+							</div>
+							<div class="textAboutMe">
+								<h1>About ME</h1>
+							</div>
+							<div class="textProjects">
+								<div class="slides">
+									<input type="radio" name="radio-btn" id="radio1" />
+									<input type="radio" name="radio-btn" id="radio2" />
+									<input type="radio" name="radio-btn" id="radio3" />
+
+									<div class="slide first">
+										<div class="image1">
+											<img src="./images/image1.jpg" alt="" />
+											<div class="image-btn-text">
+												<h2>Twitter-clone</h2>
+												<a
+													target="_blank"
+													href="https://github.com/piteeeeerek27/Twitter"
+													>Code</a
+												>
+											</div>
+										</div>
+									</div>
+									<div class="slide second">
+										<div class="image2">
+											<img src="./images/image 2.jpg" alt="" />
+											<div class="image-btn-text">
+												<h2>project 2</h2>
+												<a target="_blank" href="">Code</a>
+											</div>
+										</div>
+									</div>
+									<div class="slide third">
+										<div class="image3">
+											<img src="./images/image 3.jpg" alt="" />
+											<div class="image-btn-text">
+												<h2>project 3</h2>
+												<a target="_blank" href="">Code</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="autoNav">
+										<div class="auto-btn1"></div>
+										<div class="auto-btn2"></div>
+										<div class="auto-btn3"></div>
+									</div>
+								</div>
+								<div class="manualNav">
+									<label for="radio1" class="manual-btn"></label>
+									<label for="radio2" class="manual-btn"></label>
+									<label for="radio3" class="manual-btn"></label>
+								</div>
+							</div>
+							<div class="textTechnologies">
+								<div>Html</div>
+								<div>Css</div>
+								<div>Javascript</div>
+								<div>React</div>
+							</div>
+
+							<div class="CV">
+								<h1>press CV to download</h1>
+								<a
+									class="download-CV"
+									href="../images/PIOTR RZESNY.png"
+									download
+								>
+									CV
+								</a>
+							</div>
+
+							<div class="section-while">
+								<h2>
+									<span class="section-while-pink">while</span>
+									<span class="section-green-text-alive">
+										<span>(</span>alive<span>)</span></span
+									>
+									{
+									<br />
+									<span class="section-green-text">eat</span>();
+									<br />
+									<span class="section-green-text">sleep</span>();
+									<br />
+									<span class="section-green-text">code</span>();
+									<br />
+									<span class="section-green-text">repeat</span>();
+									<br />
+									<span>}</span>
+								</h2>
+							</div>
+
+							<button id="showSidebar" class="section-btn-open">
+								<span class="darkGreenSpan">C</span>
+								<span class="darkGreenSpan-2">O</span>
+								<span class="darkGreenSpan">N</span>
+								<span class="darkGreenSpan-2">T</span>
+								<span class="darkGreenSpan">A</span>
+								<span class="darkGreenSpan-2">C</span>
+								<span class="darkGreenSpan">T</span>
+								<span class="darkGreenSpan-2">S</span>
+							</button>
+
+							<button id="hideSidebar" class="section-btn-close">
+								<span class="left">
+									<span class="circle-left"></span>
+									<span class="circle-right"></span>
+								</span>
+								<span class="right">
+									<span class="circle-left"></span>
+									<span class="circle-right"></span>
+								</span>
+							</button>
+						</section>
+					</div>
+				</div>
+				<div class="asideDiv"></div>
 			</div>
 		</main>
 		<script src="../src/ts/index.ts"></script>

@@ -1,6 +1,6 @@
 export const Nav: any = () => {
 	const toString = require("../html/nav.html");
-	const mainDiv = document.createElement("div");
-	mainDiv.innerHTML = toString.default;
-	return mainDiv;
+	const nav = document.querySelector(".leftSectionNav");
+	nav.innerHTML = toString.default;
+	return nav;
 };
