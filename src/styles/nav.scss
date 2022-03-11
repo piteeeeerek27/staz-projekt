@@ -1,45 +1,44 @@
 @mixin nav {
 	.nav {
-		flex: 0.1;
-		padding: 2rem 0;
-		ul {
-			justify-content: space-around;
-			list-style-type: none;
-			display: flex;
-			align-items: center;
-			li {
-				font-family: "Sansita Swashed", cursive;
+		padding: 1rem 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		.tabs {
+			font-family: "Sansita Swashed", cursive;
+			padding: 10px;
+			background-color: transparent;
+			text-align: center;
+			font-size: xx-large;
+			min-width: 340px;
+			color: $light-green;
+			transition: transform 500ms ease-in-out;
+			transform: scale(1);
+			&:last-child {
+				min-width: 390px;
+			}
+			&:hover {
+				padding: 9px;
+				border: 1px solid $dark-green;
+				background-color: $black-green;
+				border-radius: 5px;
 				transition: transform 500ms ease-in-out;
-				background-color: transparent;
-				transform: scale(1);
-				font-size: xx-large;
-				min-width: 270px;
-				text-align: center;
-				&:last-child {
-					min-width: 315px;
+				transform: scale(1.1);
+				cursor: pointer;
+				span {
+					background-color: $black-green;
 				}
-				&:hover {
-					transition: transform 500ms ease-in-out;
-					transform: scale(1.2);
-					cursor: pointer;
-				}
-				.tabs {
-					text-decoration: none;
-					padding: 8px;
+				.darkGreenSpan {
 					color: $light-green;
-					&:hover {
-						border: 1px solid $dark-green;
-						background-color: $black-green;
-						border-radius: 5px;
-						span {
-							background-color: $black-green;
-						}
-						.darkGreenSpan {
-							color: $light-green;
-						}
-					}
 				}
 			}
+			// li {
+			// 	&:hover {
+			// 		transition: transform 500ms ease-in-out;
+			// 		transform: scale(1.2);
+			// 		cursor: pointer;
+			// 	}
+			// }
 		}
 	}
 }

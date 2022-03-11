@@ -95,7 +95,7 @@ class Project {
 		const hideSidebar = document.getElementById("hideSidebar");
 		const sidebar = document.getElementById("aside");
 		showSidebar.addEventListener("click", () => {
-			sidebar.style.display = "grid";
+			sidebar.style.display = "flex";
 			showSidebar.style.display = "none";
 			hideSidebar.style.display = "block";
 		});
