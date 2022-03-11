@@ -3,9 +3,9 @@
 // import { Aside } from "./Aside";
 import "../styles/main.scss";
 
-const mainContent = document.querySelector(".leftSection");
+// const mainContent = document.querySelector(".leftSection");
 const mainDiv = document.getElementById("mainDiv");
-const section = document.querySelector(".sectionDiv");
+// const section = document.querySelector(".sectionDiv");
 
 // NAV TABS
 const tabHome = document.querySelector(".tabHome");
@@ -19,8 +19,12 @@ const textProjects = document.querySelector(".textProjects");
 const textTechnologies = document.querySelector(".textTechnologies");
 
 const sectionn = document.querySelector(".section");
+
 class Project {
+	progressBar = document.querySelectorAll<HTMLElement>(".progress-bar");
+
 	constructor() {
+		this.showProgress();
 		this.run();
 		this.toggleSidebar();
 	}
@@ -32,6 +36,12 @@ class Project {
 		// mainContent.appendChild(this.Context());
 		mainDiv.appendChild(this.Aside());
 		this.clicked();
+	}
+	showProgress() {
+		this.progressBar.forEach((progressBar) => {
+			const value = progressBar.dataset.progress;
+			progressBar.style.width = `${value}%`;
+		});
 	}
 	clicked() {
 		tabHome.addEventListener("click", () => {
