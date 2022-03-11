@@ -41,6 +41,7 @@ class Project {
 		this.progressBar.forEach((progressBar) => {
 			const value = progressBar.dataset.progress;
 			progressBar.style.width = `${value}%`;
+			progressBar.innerHTML = `<span class="progressSpan">${value}%</span>`;
 		});
 	}
 	clicked() {

@@ -180,7 +180,7 @@
 						border-radius: 10px;
 						position: relative;
 						transition: all 0.5s;
-						span {
+						.progressSpan {
 							position: absolute;
 							right: 0;
 							color: $light-green;
