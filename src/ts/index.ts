@@ -4,84 +4,92 @@
 import "../styles/main.scss";
 
 // const mainContent = document.querySelector(".leftSection");
-const mainDiv = document.getElementById("mainDiv");
 // const section = document.querySelector(".sectionDiv");
 
-// NAV TABS
-const tabHome = document.querySelector(".tabHome");
-const tabAboutMe = document.querySelector(".tabAboutMe");
-const tabProjects = document.querySelector(".tabProjects");
-const tabsTechnologies = document.querySelector(".tabTechnologies");
-// TABS SECTIONS
-const text = document.querySelector(".text");
-const textAboutMe = document.querySelector(".textAboutMe");
-const textProjects = document.querySelector(".textProjects");
-const textTechnologies = document.querySelector(".textTechnologies");
-
-const sectionn = document.querySelector(".section");
-
 class Project {
-	progressBar = document.querySelectorAll<HTMLElement>(".progress-bar");
+	mainDiv = document.getElementById("mainDiv");
+	// NAV TABS
+	tabHome = document.querySelector(".tabHome");
+	tabAboutMe = document.querySelector(".tabAboutMe");
+	tabProjects = document.querySelector(".tabProjects");
+	tabsTechnologies = document.querySelector(".tabTechnologies");
+	// TABS SECTIONS
+	text = document.querySelector(".text");
+	textAboutMe = document.querySelector(".textAboutMe");
+	textProjects = document.querySelector(".textProjects");
+	textTechnologies = document.querySelector(".textTechnologies");
+
+	sectionn = document.querySelector(".section");
 
 	constructor() {
-		this.showProgress();
 		this.run();
 		this.toggleSidebar();
 	}
 	run() {
-		textAboutMe.remove();
-		textProjects.remove();
-		textTechnologies.remove();
+		this.textAboutMe.remove();
+		this.textProjects.remove();
+		this.textTechnologies.remove();
 		// mainContent.appendChild(this.Nav());
 		// mainContent.appendChild(this.Context());
-		mainDiv.appendChild(this.Aside());
+		this.Aside();
 		this.clicked();
 	}
-	showProgress() {
-		this.progressBar.forEach((progressBar) => {
-			const value = progressBar.dataset.progress;
-			progressBar.style.width = `${value}%`;
-			progressBar.innerHTML = `<span class="progressSpan">${value}%</span>`;
-		});
-	}
 	clicked() {
-		tabHome.addEventListener("click", () => {
-			textAboutMe.remove();
-			textProjects.remove();
-			textTechnologies.remove();
-			sectionn.appendChild(text);
+		this.tabHome.addEventListener("click", () => {
+			this.textAboutMe.remove();
+			this.textProjects.remove();
+			this.textTechnologies.remove();
+			this.sectionn.appendChild(this.text);
 		});
-		tabAboutMe.addEventListener("click", () => {
-			text.remove();
-			textProjects.remove();
-			textTechnologies.remove();
-			sectionn.appendChild(textAboutMe);
+		this.tabAboutMe.addEventListener("click", () => {
+			this.text.remove();
+			this.textProjects.remove();
+			this.textTechnologies.remove();
+			this.sectionn.appendChild(this.textAboutMe);
 		});
-		tabProjects.addEventListener("click", () => {
-			text.remove();
-			textAboutMe.remove();
-			textTechnologies.remove();
-			sectionn.appendChild(textProjects);
+		this.tabProjects.addEventListener("click", () => {
+			this.text.remove();
+			this.textAboutMe.remove();
+			this.textTechnologies.remove();
+			this.sectionn.appendChild(this.textProjects);
 		});
-		tabsTechnologies.addEventListener("click", () => {
-			text.remove();
-			textAboutMe.remove();
-			textProjects.remove();
-			sectionn.appendChild(textTechnologies);
+		this.tabsTechnologies.addEventListener("click", () => {
+			this.text.remove();
+			this.textAboutMe.remove();
+			this.textProjects.remove();
+			this.sectionn.appendChild(this.textTechnologies);
+			const progressBar =
+				document.querySelectorAll<HTMLElement>(".progress-bar");
+			progressBar.forEach((bar) => {
+				bar.style.width = "0%";
+				let progressEndValue = +bar.dataset.progress;
+				let progressValue = 0;
+				let speed = 70;
+				let progress = setInterval(() => {
+					progressValue++;
+					bar.style.opacity = "1";
+					bar.style.width = progressValue.toString() + "%";
+					bar.innerHTML = `<span class="progressSpan">${progressValue}%</span>`;
+					if (progressValue == progressEndValue) {
+						clearInterval(progress);
+					}
+				}, speed);
+			});
 		});
 	}
-	Nav: any = () => {
-		const toString = require("../html/nav.html");
-		const nav = document.querySelector(".leftSectionNav");
-		nav.innerHTML = toString.default;
-		return nav;
-	};
-	Context: any = () => {
-		const toString = require("../html/context.html");
-		const section = document.querySelector(".sectionDiv");
-		section.innerHTML = toString.default;
-		return section;
-	};
+
+	// Nav: any = () => {
+	// 	const toString = require("../html/nav.html");
+	// 	const nav = document.querySelector(".leftSectionNav");
+	// 	nav.innerHTML = toString.default;
+	// 	return nav;
+	// };
+	// Context: any = () => {
+	// 	const toString = require("../html/context.html");
+	// 	const section = document.querySelector(".sectionDiv");
+	// 	section.innerHTML = toString.default;
+	// 	return section;
+	// };
 	Aside: any = () => {
 		const toString = require("../html/aside.html");
 		const div = document.querySelector(".asideDiv");
