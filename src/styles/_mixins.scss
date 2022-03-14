@@ -17,3 +17,8 @@
 	display: flex;
 	align-items: center;
 }
+@mixin flexColumnSpaceBetween {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
