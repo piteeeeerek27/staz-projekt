@@ -1,9 +1,7 @@
 @mixin nav {
 	.nav {
 		padding: 1rem 0;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		@include flexSpaceAroundCenter;
 		.tabs {
 			font-family: "Sansita Swashed", cursive;
 			padding: 10px;
@@ -11,7 +9,7 @@
 			text-align: center;
 			font-size: xx-large;
 			min-width: 340px;
-			color: $light-green;
+			color: $whiteText;
 			transition: transform 500ms ease-in-out;
 			transform: scale(1);
 			&:last-child {
@@ -32,13 +30,28 @@
 					color: $light-green;
 				}
 			}
-			// li {
-			// 	&:hover {
-			// 		transition: transform 500ms ease-in-out;
-			// 		transform: scale(1.2);
-			// 		cursor: pointer;
-			// 	}
-			// }
+		}
+	}
+	@media (max-width: 1200px) {
+		.nav {
+			.tabs {
+				font-size: 1.5rem;
+				min-width: 207px;
+				&:last-child {
+					min-width: 225px;
+				}
+			}
+		}
+	}
+	@media (max-width: 1600px) {
+		.nav {
+			.tabs {
+				font-size: 1.6rem;
+				min-width: 220px;
+				&:last-child {
+					min-width: 245px;
+				}
+			}
 		}
 	}
 }

@@ -112,12 +112,13 @@
 		}
 	}
 }
-@mixin openSidebarButton {
+@mixin openSidebarButtonBig {
 	.section-btn-open {
 		cursor: pointer;
+		border-radius: 10px;
 		position: absolute;
-		bottom: 5%;
-		left: 40%;
+		bottom: 10%;
+		left: 35%;
 		span {
 			background-color: transparent;
 			font-family: "Sansita Swashed", cursive;
@@ -179,4 +180,6 @@
 			animation-timing-function: steps(2, end);
 		}
 	}
+}
+@mixin openSidebarButtonSmall {
 }
