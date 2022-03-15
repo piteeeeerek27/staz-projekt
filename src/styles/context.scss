@@ -46,9 +46,12 @@
 		}
 		.textAboutMe {
 			height: 60%;
-			@include flexCenterCenter;
+			display: none;
+			justify-content: space-around;
+			align-items: center;
 		}
 		.textProjects {
+			display: none;
 			width: 50%;
 			position: relative;
 			margin-left: auto;
@@ -154,6 +157,7 @@
 			}
 		}
 		.textTechnologies {
+			display: none;
 			font-family: "Staatliches", cursive;
 			width: 100%;
 			height: 60%;
@@ -201,7 +205,7 @@
 		.CV {
 			position: absolute;
 			right: 5%;
-			bottom: 4%;
+			bottom: 5%;
 			display: flex;
 			align-items: center;
 			text-align: center;
@@ -287,18 +291,10 @@
 }
 @keyframes circleBigScreen {
 	0% {
-		transform: rotate(0deg) translate(-135px) rotate(0deg);
+		transform: rotate(0deg) translate(-120px) rotate(0deg);
 	}
 	100% {
-		transform: rotate(360deg) translate(-135px) rotate(-360deg);
-	}
-}
-@keyframes circleSmallScreen {
-	0% {
-		transform: rotate(0deg) translate(-85px) rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg) translate(-85px) rotate(-360deg);
+		transform: rotate(360deg) translate(-120px) rotate(-360deg);
 	}
 }
 @media (min-width: 768px) {
@@ -342,21 +338,6 @@
 }
 
 @media (max-width: 1200px) {
-	.CV {
-		width: 150px;
-		height: 150px;
-		right: 0%;
-		bottom: 7%;
-		h1 {
-			font-size: xx-large;
-		}
-		.download-CV {
-			font-size: 1.7rem;
-			width: 40px;
-			height: 40px;
-			animation: circleSmallScreen 10s linear infinite;
-		}
-	}
 	.section {
 		.section-btn-open {
 			cursor: pointer;

@@ -37,7 +37,7 @@ body {
 		.leftSection {
 			width: 100%;
 			@include flexColumnCenter;
-			.sectionDiv {
+			.divSection {
 				flex-grow: 1;
 				@include context;
 			}

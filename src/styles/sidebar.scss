@@ -1,6 +1,8 @@
 @mixin aside {
 	.asideDiv {
-		@include flexColumnCenter;
+		display: none;
+		justify-content: space-around;
+		align-items: center;
 		font-family: $fontSansitaSwashed;
 		.header {
 			margin: 1rem 10px 2rem 10px;

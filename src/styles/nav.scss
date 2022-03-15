@@ -8,7 +8,8 @@
 			background-color: transparent;
 			text-align: center;
 			font-size: xx-large;
-			min-width: 340px;
+			min-width: 345px;
+			margin-left: 1.5rem;
 			color: $whiteText;
 			transition: transform 500ms ease-in-out;
 			transform: scale(1);
@@ -36,9 +37,11 @@
 		.nav {
 			.tabs {
 				font-size: 1.5rem;
+				margin-left: 1rem;
 				min-width: 207px;
 				&:last-child {
 					min-width: 225px;
+					margin-left: 0.5rem;
 				}
 			}
 		}

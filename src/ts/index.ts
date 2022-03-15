@@ -15,23 +15,27 @@ enum Displays {
 	none = "none",
 }
 
+// console.log("aboutMeText", aboutMeText);
+// console.log("projectsText", projectsText);
+// console.log("technologiesText", technologiesText);
+
 class Project {
 	mainDiv = document.querySelector(".mainDiv");
 	mainContent = document.querySelector(".leftSection");
 	section = document.querySelector(".sectionDiv");
-	aside = document.querySelector(".asideDiv");
-	// asideDiv = this.aside.querySelector(".aside");
-	sectionn = document.querySelector(".section");
+	aside = document.querySelector<HTMLElement>(".asideDiv");
+	sectionn = Context().querySelector(".section");
+
 	// NAV TABS
-	tabHome = document.querySelector(".tabHome");
-	tabAboutMe = document.querySelector(".tabAboutMe");
-	tabProjects = document.querySelector(".tabProjects");
-	tabsTechnologies = document.querySelector(".tabTechnologies");
-	// TABS SECTIONS
-	text = document.querySelector(".text");
-	textAboutMe = document.querySelector(".textAboutMe");
-	textProjects = document.querySelector(".textProjects");
-	textTechnologies = document.querySelector(".textTechnologies");
+	homeTab = Nav().querySelector(".tabHome");
+	aboutMeTab = Nav().querySelector(".tabAboutMe");
+	projectsTab = Nav().querySelector(".tabProjects");
+	technologiesTab = Nav().querySelector(".tabTechnologies");
+	// TEXT SECTIONS
+	homeText = Context().querySelector(".text");
+	aboutMeText = Context().querySelector(".textAboutMe");
+	projectsText = Context().querySelector(".textProjects");
+	technologiesText = Context().querySelector(".textTechnologies");
 
 	constructor() {
 		this.run();
@@ -41,13 +45,9 @@ class Project {
 		this.mainContent.appendChild(Nav());
 		this.mainContent.appendChild(Context());
 		this.aside.appendChild(Aside());
-
-		// NULL
-		// this.textAboutMe.remove();
-		// this.textProjects.remove();
-		// this.textTechnologies.remove();
-		// this.clicked();
+		this.clicked();
 	}
+
 	clicked() {
 		function listener(
 			tab,
@@ -66,36 +66,37 @@ class Project {
 		}
 		// HOME LISTENER
 		listener(
-			this.tabHome,
-			this.textAboutMe,
-			this.textProjects,
-			this.textTechnologies,
+			this.homeTab,
+			this.aboutMeText,
+			this.projectsText,
+			this.technologiesText,
 			this.sectionn,
-			this.text,
+			this.homeText,
 		);
 		// ABOUT ME LISTENER
 		listener(
-			this.tabAboutMe,
-			this.text,
-			this.textProjects,
-			this.textTechnologies,
+			this.aboutMeTab,
+			this.homeText,
+			this.projectsText,
+			this.technologiesText,
 			this.sectionn,
-			this.textAboutMe,
+			this.aboutMeText,
 		);
 		// PROJECTS LISTENER
 		listener(
-			this.tabProjects,
-			this.text,
-			this.textAboutMe,
-			this.textTechnologies,
+			this.projectsTab,
+			this.homeText,
+			this.aboutMeText,
+			this.technologiesText,
 			this.sectionn,
-			this.textProjects,
+			this.projectsText,
 		);
-		this.tabsTechnologies.addEventListener("click", () => {
-			this.text.remove();
-			this.textAboutMe.remove();
-			this.textProjects.remove();
-			this.sectionn.appendChild(this.textTechnologies);
+		this.technologiesTab.addEventListener("click", () => {
+			console.log("CLICK TAB");
+			this.homeText.remove();
+			this.aboutMeText.remove();
+			this.projectsText.remove();
+			this.sectionn.appendChild(this.technologiesText);
 
 			const progressBar =
 				document.querySelectorAll<HTMLElement>(".progress-bar");
@@ -122,14 +123,13 @@ class Project {
 	toggleSidebar() {
 		const showSidebar = document.getElementById("showSidebar");
 		const hideSidebar = document.getElementById("hideSidebar");
-		const asdd = this.aside.querySelector<HTMLElement>(".aside");
 		showSidebar.addEventListener("click", () => {
-			asdd.style.display = Displays.flex;
+			this.aside.style.display = Displays.flex;
 			showSidebar.style.display = Displays.none;
 			hideSidebar.style.display = Displays.block;
 		});
 		hideSidebar.addEventListener("click", () => {
-			asdd.style.display = Displays.none;
+			this.aside.style.display = Displays.none;
 			showSidebar.style.display = Displays.block;
 			hideSidebar.style.display = Displays.none;
 		});
