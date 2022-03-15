@@ -14,24 +14,11 @@ enum Displays {
 	flex = "flex",
 	none = "none",
 }
-
 class Project {
 	mainDiv = document.querySelector(".mainDiv");
 	mainContent = document.querySelector(".leftSection");
 	section = document.querySelector(".sectionDiv");
 	aside = document.querySelector<HTMLElement>(".asideDiv");
-
-	sectionn = Context().querySelector(".section");
-	// NAV TABS
-	homeTab = Nav().querySelector(".tabHome");
-	aboutMeTab = Nav().querySelector(".tabAboutMe");
-	projectsTab = Nav().querySelector(".tabProjects");
-	technologiesTab = Nav().querySelector(".tabTechnologies");
-	// TEXT SECTIONS
-	homeText = Context().querySelector(".text");
-	aboutMeText = Context().querySelector(".textAboutMe");
-	projectsText = Context().querySelector(".textProjects");
-	technologiesText = Context().querySelector(".textTechnologies");
 
 	constructor() {
 		this.run();
@@ -41,10 +28,23 @@ class Project {
 		this.mainContent.appendChild(Nav());
 		this.mainContent.appendChild(Context());
 		this.aside.appendChild(Aside());
+
 		this.clicked();
 	}
 
 	clicked() {
+		const sectionn = document.querySelector(".section-text-div");
+		// NAV TABS
+		const homeTab = document.querySelector(".tabHome");
+		const aboutMeTab = document.querySelector(".tabAboutMe");
+		const projectsTab = document.querySelector(".tabProjects");
+		const technologiesTab = document.querySelector(".tabTechnologies");
+		// TEXT SECTIONS
+		const homeText = document.querySelector(".text");
+		const aboutMeText = document.querySelector(".textAboutMe");
+		const projectsText = document.querySelector(".textProjects");
+		const technologiesText =
+			document.querySelector<HTMLElement>(".textTechnologies");
 		function listener(
 			tab,
 			removeText1,
@@ -52,49 +52,53 @@ class Project {
 			removeText3,
 			section,
 			appendText,
+			display,
 		) {
 			return tab.addEventListener("click", () => {
 				removeText1.remove();
 				removeText2.remove();
 				removeText3.remove();
+				appendText.style.display = display;
 				section.appendChild(appendText);
 			});
 		}
 		// HOME LISTENER
 		listener(
-			this.homeTab,
-			this.aboutMeText,
-			this.projectsText,
-			this.technologiesText,
-			this.sectionn,
-			this.homeText,
+			homeTab,
+			aboutMeText,
+			projectsText,
+			technologiesText,
+			sectionn,
+			homeText,
+			Displays.flex,
 		);
 		// ABOUT ME LISTENER
 		listener(
-			this.aboutMeTab,
-			this.homeText,
-			this.projectsText,
-			this.technologiesText,
-			this.sectionn,
-			this.aboutMeText,
+			aboutMeTab,
+			homeText,
+			projectsText,
+			technologiesText,
+			sectionn,
+			aboutMeText,
+			Displays.flex,
 		);
 		// PROJECTS LISTENER
 		listener(
-			this.projectsTab,
-			this.homeText,
-			this.aboutMeText,
-			this.technologiesText,
-			this.sectionn,
-			this.projectsText,
+			projectsTab,
+			homeText,
+			aboutMeText,
+			technologiesText,
+			sectionn,
+			projectsText,
+			Displays.block,
 		);
-		console.log(" technologiesTab", this.technologiesTab);
 
-		this.technologiesTab.addEventListener("click", () => {
-			console.log("CLICKED TAB");
-			this.homeText.remove();
-			this.aboutMeText.remove();
-			this.projectsText.remove();
-			this.sectionn.appendChild(this.technologiesText);
+		technologiesTab.addEventListener("click", () => {
+			homeText.remove();
+			aboutMeText.remove();
+			projectsText.remove();
+			technologiesText.style.display = Displays.flex;
+			sectionn.appendChild(technologiesText);
 
 			const progressBar =
 				document.querySelectorAll<HTMLElement>(".progress-bar");
@@ -121,16 +125,36 @@ class Project {
 	toggleSidebar() {
 		const showSidebar = document.getElementById("showSidebar");
 		const hideSidebar = document.getElementById("hideSidebar");
-		showSidebar.addEventListener("click", () => {
-			this.aside.style.display = Displays.flex;
-			showSidebar.style.display = Displays.none;
-			hideSidebar.style.display = Displays.block;
-		});
-		hideSidebar.addEventListener("click", () => {
-			this.aside.style.display = Displays.none;
-			showSidebar.style.display = Displays.block;
-			hideSidebar.style.display = Displays.none;
-		});
+		function listenerSidebar(
+			sidebar1,
+			sidebar2,
+			aside,
+			display1,
+			display2,
+			display3,
+		) {
+			return sidebar1.addEventListener("click", () => {
+				aside.style.display = display1;
+				sidebar1.style.display = display2;
+				sidebar2.style.display = display3;
+			});
+		}
+		listenerSidebar(
+			showSidebar,
+			hideSidebar,
+			this.aside,
+			Displays.flex,
+			Displays.none,
+			Displays.block,
+		);
+		listenerSidebar(
+			hideSidebar,
+			showSidebar,
+			this.aside,
+			Displays.none,
+			Displays.none,
+			Displays.block,
+		);
 	}
 }
 new Project();

@@ -4,6 +4,174 @@
 		position: relative;
 		padding: 0 10px;
 		height: 100%;
+		.section-text-div {
+			min-height: 50%;
+			background-color: rgb(16, 27, 27);
+			.text {
+				margin: 0 2rem;
+				padding-top: 2rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				.section-h1 {
+					@include flexAlignCenter;
+					margin: 1rem 2rem;
+				}
+				.section-h3 {
+					@include flexAlignCenter;
+					margin: 1rem 2rem;
+				}
+			}
+			.textAboutMe {
+				height: 60%;
+				display: none;
+				justify-content: center;
+				align-items: center;
+			}
+			.textProjects {
+				display: none;
+				width: 50%;
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				padding-top: 2rem;
+				height: 60%;
+				border-radius: 10px;
+				overflow: hidden;
+				.slides {
+					width: 500%;
+					height: 100%;
+					display: flex;
+					input {
+						display: none;
+					}
+					#radio1:checked ~ .first {
+						margin-left: 0;
+					}
+					#radio2:checked ~ .first {
+						margin-left: -20%;
+					}
+					#radio3:checked ~ .first {
+						margin-left: -40%;
+					}
+					.slide {
+						width: 20%;
+						transition: 1s;
+						img {
+							max-width: 65%;
+							object-fit: cover;
+							min-height: 70%;
+							border-radius: 20%;
+							margin-top: 0.5rem;
+							margin-bottom: 0.5rem;
+							transform: scale(1);
+							transition: transform 200ms ease-in-out;
+							&:hover {
+								cursor: pointer;
+								transform: scale(1.02);
+								transition: transform 200ms ease-in-out;
+								opacity: 0.5;
+							}
+						}
+						.image1,
+						.image2,
+						.image3 {
+							width: 100%;
+							height: 85%;
+							@include flexColumnCenter;
+							.image-btn-text {
+								padding-bottom: 4rem;
+								padding-top: 1.5rem;
+								margin-right: auto;
+								width: 60%;
+								display: flex;
+								justify-content: space-between;
+								h2 {
+									font-family: $fontSansitaSwashed;
+									color: $dark-green;
+									padding-left: 1rem;
+								}
+								a {
+									color: $whiteText;
+									font-size: x-large;
+									text-decoration: none;
+									background: transparent;
+									border: none;
+									padding: 0.2rem 1rem;
+									margin-right: 1rem;
+									letter-spacing: 3px;
+									box-shadow: 3px 5px 10px 5px $dark-green;
+									cursor: pointer;
+									font-family: $fontSansitaSwashed;
+									border-radius: 10px;
+									color: $dark-green;
+									transform: scale(1);
+									transition: transform 300ms ease-in-out;
+									&:hover {
+										transform: scale(1.1);
+										transition: transform 300ms ease-in-out;
+									}
+								}
+							}
+						}
+					}
+				}
+				.manualNav {
+					position: absolute;
+					bottom: 2%;
+					width: 100%;
+					display: flex;
+					justify-content: space-around;
+					.manual-btn {
+						border: 2px solid $dark-purple;
+						padding: 10px;
+						border-radius: 10px;
+						cursor: pointer;
+						transition: 1s;
+						&:hover {
+							background-color: $dark-purple;
+						}
+					}
+				}
+			}
+			.textTechnologies {
+				display: none;
+				font-family: "Staatliches", cursive;
+				width: 100%;
+				height: 60%;
+				padding-top: 1rem;
+				.container {
+					width: 60%;
+					height: 100%;
+					margin: 3rem auto 0 auto;
+					p {
+						margin-top: 1rem;
+					}
+					.progress {
+						width: 100%;
+						height: 30px;
+						background-color: $black-purple;
+						border-radius: 10px;
+						.progress-bar {
+							width: 50%;
+							height: 100%;
+							background-color: $darkest-green;
+							border-radius: 10px;
+							position: relative;
+							transition: all 0.5s;
+							.progressSpan {
+								position: absolute;
+								right: 0;
+								top: 10%;
+								margin-right: 10px;
+								color: $whiteText;
+							}
+						}
+					}
+				}
+			}
+		}
 		.section-while {
 			position: absolute;
 			bottom: 3%;
@@ -26,170 +194,6 @@
 				width: 300px;
 				font-weight: 100;
 				color: $dark-gray;
-			}
-		}
-		.text {
-			box-sizing: border-box;
-			min-height: 53%;
-			margin: 0 2rem;
-			padding-top: 2rem;
-			display: grid;
-			place-items: center;
-			.section-h1 {
-				@include flexAlignCenter;
-				margin: 0 2rem;
-			}
-			.section-h3 {
-				@include flexAlignCenter;
-				margin: 0 2rem;
-			}
-		}
-		.textAboutMe {
-			height: 60%;
-			display: none;
-			justify-content: space-around;
-			align-items: center;
-		}
-		.textProjects {
-			display: none;
-			width: 50%;
-			position: relative;
-			margin-left: auto;
-			margin-right: auto;
-			padding-top: 2rem;
-			height: 60%;
-			border-radius: 10px;
-			overflow: hidden;
-			.slides {
-				width: 500%;
-				height: 100%;
-				display: flex;
-				input {
-					display: none;
-				}
-				#radio1:checked ~ .first {
-					margin-left: 0;
-				}
-				#radio2:checked ~ .first {
-					margin-left: -20%;
-				}
-				#radio3:checked ~ .first {
-					margin-left: -40%;
-				}
-				.slide {
-					width: 20%;
-					transition: 1s;
-					img {
-						max-width: 65%;
-						object-fit: cover;
-						max-height: 80%;
-						border-radius: 40%;
-						margin-top: 0.5rem;
-						margin-bottom: 0.5rem;
-						transform: scale(1);
-						transition: transform 200ms ease-in-out;
-						&:hover {
-							cursor: pointer;
-							transform: scale(1.02);
-							transition: transform 200ms ease-in-out;
-							opacity: 0.5;
-						}
-					}
-					.image1,
-					.image2,
-					.image3 {
-						width: 100%;
-						height: 85%;
-						@include flexColumnCenter;
-						.image-btn-text {
-							padding-bottom: 4rem;
-							padding-top: 1.5rem;
-							margin-right: auto;
-							width: 60%;
-							display: flex;
-							justify-content: space-between;
-							h2 {
-								font-family: $fontSansitaSwashed;
-								color: $dark-green;
-								padding-left: 1rem;
-							}
-							a {
-								color: $whiteText;
-								font-size: x-large;
-								text-decoration: none;
-								background: transparent;
-								border: none;
-								padding: 0.2rem 1rem;
-								margin-right: 1rem;
-								letter-spacing: 3px;
-								box-shadow: 3px 5px 10px 5px $dark-green;
-								cursor: pointer;
-								font-family: $fontSansitaSwashed;
-								border-radius: 10px;
-								color: $dark-green;
-								transform: scale(1);
-								transition: transform 300ms ease-in-out;
-								&:hover {
-									transform: scale(1.1);
-									transition: transform 300ms ease-in-out;
-								}
-							}
-						}
-					}
-				}
-			}
-			.manualNav {
-				position: absolute;
-				bottom: 2%;
-				width: 100%;
-				display: flex;
-				justify-content: space-around;
-				.manual-btn {
-					border: 2px solid $dark-purple;
-					padding: 10px;
-					border-radius: 10px;
-					cursor: pointer;
-					transition: 1s;
-					&:hover {
-						background-color: $dark-purple;
-					}
-				}
-			}
-		}
-		.textTechnologies {
-			display: none;
-			font-family: "Staatliches", cursive;
-			width: 100%;
-			height: 60%;
-			padding-top: 1rem;
-			.container {
-				width: 60%;
-				height: 100%;
-				margin: 3rem auto 0 auto;
-				p {
-					margin-top: 1rem;
-				}
-				.progress {
-					width: 100%;
-					height: 30px;
-					background-color: $black-purple;
-					border-radius: 10px;
-					.progress-bar {
-						width: 50%;
-						height: 100%;
-						background-color: $darkest-green;
-						border-radius: 10px;
-						position: relative;
-						transition: all 0.5s;
-						.progressSpan {
-							position: absolute;
-							right: 0;
-							top: 10%;
-							margin-right: 10px;
-							color: $whiteText;
-						}
-					}
-				}
 			}
 		}
 		h1 {

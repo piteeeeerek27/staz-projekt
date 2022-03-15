@@ -39,6 +39,7 @@ body {
 			@include flexColumnCenter;
 			.divSection {
 				flex-grow: 1;
+				width: 100%;
 				@include context;
 			}
 			@include nav;

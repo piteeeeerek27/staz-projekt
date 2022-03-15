@@ -1,6 +1,6 @@
 @mixin nav {
 	.nav {
-		padding: 1rem 0;
+		padding: 1rem 0 3rem 0;
 		@include flexSpaceAroundCenter;
 		.tabs {
 			font-family: $fontSansitaSwashed;
@@ -33,28 +33,28 @@
 			}
 		}
 	}
-	// @media (max-width: 1200px) {
-	// 	.nav {
-	// 		.tabs {
-	// 			font-size: 1.5rem;
-	// 			margin-left: 1rem;
-	// 			min-width: 207px;
-	// 			&:last-child {
-	// 				min-width: 225px;
-	// 				margin-left: 0.5rem;
-	// 			}
-	// 		}
-	// 	}
-	// }
-	// @media (max-width: 1600px) {
-	// 	.nav {
-	// 		.tabs {
-	// 			font-size: 1.6rem;
-	// 			min-width: 220px;
-	// 			&:last-child {
-	// 				min-width: 245px;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	@media (max-width: 1200px) {
+		.nav {
+			.tabs {
+				font-size: 1.5rem;
+				margin-left: 1rem;
+				min-width: 207px;
+				&:last-child {
+					min-width: 225px;
+					margin-left: 0.5rem;
+				}
+			}
+		}
+	}
+	@media (max-width: 1600px) {
+		.nav {
+			.tabs {
+				font-size: 1.6rem;
+				min-width: 220px;
+				&:last-child {
+					min-width: 245px;
+				}
+			}
+		}
+	}
 }
