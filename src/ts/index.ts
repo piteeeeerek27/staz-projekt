@@ -15,17 +15,13 @@ enum Displays {
 	none = "none",
 }
 
-// console.log("aboutMeText", aboutMeText);
-// console.log("projectsText", projectsText);
-// console.log("technologiesText", technologiesText);
-
 class Project {
 	mainDiv = document.querySelector(".mainDiv");
 	mainContent = document.querySelector(".leftSection");
 	section = document.querySelector(".sectionDiv");
 	aside = document.querySelector<HTMLElement>(".asideDiv");
-	sectionn = Context().querySelector(".section");
 
+	sectionn = Context().querySelector(".section");
 	// NAV TABS
 	homeTab = Nav().querySelector(".tabHome");
 	aboutMeTab = Nav().querySelector(".tabAboutMe");
@@ -91,8 +87,10 @@ class Project {
 			this.sectionn,
 			this.projectsText,
 		);
+		console.log(" technologiesTab", this.technologiesTab);
+
 		this.technologiesTab.addEventListener("click", () => {
-			console.log("CLICK TAB");
+			console.log("CLICKED TAB");
 			this.homeText.remove();
 			this.aboutMeText.remove();
 			this.projectsText.remove();

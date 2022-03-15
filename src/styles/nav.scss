@@ -9,7 +9,7 @@
 			text-align: center;
 			font-size: xx-large;
 			min-width: 345px;
-			margin-left: 1.5rem;
+			// margin-left: 1.5rem;
 			color: $whiteText;
 			transition: transform 500ms ease-in-out;
 			transform: scale(1);
@@ -33,28 +33,28 @@
 			}
 		}
 	}
-	@media (max-width: 1200px) {
-		.nav {
-			.tabs {
-				font-size: 1.5rem;
-				margin-left: 1rem;
-				min-width: 207px;
-				&:last-child {
-					min-width: 225px;
-					margin-left: 0.5rem;
-				}
-			}
-		}
-	}
-	@media (max-width: 1600px) {
-		.nav {
-			.tabs {
-				font-size: 1.6rem;
-				min-width: 220px;
-				&:last-child {
-					min-width: 245px;
-				}
-			}
-		}
-	}
+	// @media (max-width: 1200px) {
+	// 	.nav {
+	// 		.tabs {
+	// 			font-size: 1.5rem;
+	// 			margin-left: 1rem;
+	// 			min-width: 207px;
+	// 			&:last-child {
+	// 				min-width: 225px;
+	// 				margin-left: 0.5rem;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// @media (max-width: 1600px) {
+	// 	.nav {
+	// 		.tabs {
+	// 			font-size: 1.6rem;
+	// 			min-width: 220px;
+	// 			&:last-child {
+	// 				min-width: 245px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
